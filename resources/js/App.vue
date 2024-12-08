@@ -1,13 +1,15 @@
 <template>
     <div>
-        <!-- Your component's HTML goes here -->
-        <ExampleComponent />
+
+        <Header />
+<!--        <router-view />-->
+
     </div>
 </template>
 
 <script setup>
+import Header from "./components/Header.vue";
 
-import ExampleComponent from "./components/ExampleComponent.vue";
 
 </script>
 
