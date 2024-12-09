@@ -6,8 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//Route::prefix('api')->group(function () {
-//    Route::get('/movies/popular', [MoviesController::class, 'getPopularMovies']);
-//});
-
-
+Route::get('/movies/popular', [MoviesController::class, 'getPopularMovies']);
