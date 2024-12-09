@@ -2,6 +2,7 @@
     <div>
 
         <Header />
+        <Index />
 <!--        <router-view />-->
 
     </div>
@@ -9,6 +10,7 @@
 
 <script setup>
 import Header from "./components/Header.vue";
+import Index from "./components/Index.vue";
 
 
 </script>

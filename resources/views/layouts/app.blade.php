@@ -37,14 +37,11 @@
 
 
 
-<div id="app">
+<div id="app" class="p-5">
 
-{{--    <Header></Header>--}}
-
-    <main class="py-4">
-{{--        @yield('content')--}}
-        <router-view></router-view>
-    </main>
+{{--    <main class="py-4">--}}
+        @yield('content')
+{{--    </main>--}}
 
 
 
