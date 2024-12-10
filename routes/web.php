@@ -12,16 +12,7 @@ use App\Http\Controllers\IndexController;
 //Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
 
 
-
-
-
-//API маршрут
-//
-//Route::prefix('api')->group(function () {
-//    Route::get('/movies/popular', [MoviesController::class, 'getPopularMovies']);
-//});
-
 Route::get('/',IndexController::class);
 
 
-//67d62e560168631aec9f199164512b42
+//Route::get('/{page}',IndexController::class)->where('page', '.*');
