@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/movies/popular', [MoviesController::class, 'getPopularMovies']);
+Route::get('/movies/popular', [MoviesController::class, 'getPopular']);
