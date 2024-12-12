@@ -18,16 +18,12 @@ class MoviesService
 
     public function getPopularMovies(): array
     {
-//        $apiKey = env('TMDB_API_KEY');
-//        $baseUrl = env('TMDB_BASE_URL'); // Використовуємо дефолтне значення
-
         $response = Http::get("{$this->baseUrl}/movie/popular", [
             'api_key' => $this->apiKey,
             'language' => 'en-US',
         ]);
 
         if ($response->successful()) {
-
             // Log::info(json_decode($response->body(), true));
             return $response->json();
         } else {
