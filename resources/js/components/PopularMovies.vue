@@ -1,6 +1,7 @@
 <template>
     <div>
         <h2>Popular Movies</h2>
+
         <ul v-if="movies && movies.length">
             <template v-for="movie in movies" :key="movie.id">
                 <li>{{ movie.title }}</li>
@@ -15,6 +16,7 @@
 <script setup>
 import {ref, onMounted} from 'vue';
 import axios from 'axios';
+import SelectComponent from "./SelectComponent.vue";
 
 const movies = ref([]);
 

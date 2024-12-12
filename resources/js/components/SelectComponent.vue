@@ -1,5 +1,6 @@
 <template>
     <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
         <div class="ml-4 relative">
             <select v-model="selectedLanguage"
                     class="block bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
@@ -10,6 +11,7 @@
                 <option value="ru">Русский</option>
             </select>
         </div>
+
     </div>
 </template>
 
@@ -19,7 +21,19 @@ import {ref} from "vue";
 const selectedLanguage = ref("en");
 
 
+
+
+
 </script>
+
+
+
+
+
+
+
+
+
 
 <style scoped>
 /* Стилі для компонента */
