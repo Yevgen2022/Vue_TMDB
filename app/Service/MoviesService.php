@@ -16,11 +16,14 @@ class MoviesService
         $this->baseUrl = env('TMDB_BASE_URL');
     }
 
-    public function getPopularMovies(): array
+    public function getPopularMovies($locale): array
     {
+
+        $language = $this->getLanguageCode($locale);
+
         $response = Http::get("{$this->baseUrl}/movie/popular", [
             'api_key' => $this->apiKey,
-            'language' => 'en-US',
+            'language' => $language,
         ]);
 
         if ($response->successful()) {
@@ -30,4 +33,17 @@ class MoviesService
             return ['error' => 'Unable to fetch data from TMDB'];
         }
     }
+
+    private function getLanguageCode($locale): string
+    {
+        // Можна створити логіку для перетворення локалі на код мови для TMDB (якщо необхідно)
+        $languages = [
+            'en' => 'en-US',
+            'uk' => 'uk-UA',
+            // додати інші мови за потреби
+        ];
+
+        return $languages[$locale] ?? 'en-US'; // за замовчуванням англійська
+    }
+
 }

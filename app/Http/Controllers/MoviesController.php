@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Log;
         $this->moviesService = $moviesService;
     }
 
-    public function getPopular(): \Illuminate\Http\JsonResponse
+    public function getPopular($locale): \Illuminate\Http\JsonResponse
     {
-        return response()->json($this->moviesService->getPopularMovies());
+        return response()->json($this->moviesService->getPopularMovies($locale));
     }
 
 //    public function index()

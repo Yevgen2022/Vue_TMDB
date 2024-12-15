@@ -3,6 +3,8 @@
 use App\Http\Controllers\MoviesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ShowsController;
+
 
 //Auth::routes();
 
@@ -12,7 +14,18 @@ use App\Http\Controllers\IndexController;
 //Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
 
 
-Route::get('/',IndexController::class);
 
+
+
+
+
+Route::prefix(\App\Helpers\Langs::getLocale())->middleware('langs')->group(function () {
+    Route::get('/',IndexController::class);
+    Route::get('/shows', [App\Http\Controllers\ShowsController::class, 'index'])->name('shows');
+});
+
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/shows', [App\Http\Controllers\ShowsController::class, 'index'])->name('shows');
 
 //Route::get('/{page}',IndexController::class)->where('page', '.*');

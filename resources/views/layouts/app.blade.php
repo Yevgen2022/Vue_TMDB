@@ -39,6 +39,8 @@
 
 <div id="app" class="p-5 bg-gray-300">
 
+    @dump(app()->getLocale())
+
     {{--    <main class="py-4">--}}
     @yield('content')
     {{--    </main>--}}
