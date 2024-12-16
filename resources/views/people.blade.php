@@ -3,7 +3,7 @@
 @section('content')
 
     <div>
-        <h1>Welcome to People page</h1>
+        <h1>Welcome to People blade</h1>
 
     </div>
 

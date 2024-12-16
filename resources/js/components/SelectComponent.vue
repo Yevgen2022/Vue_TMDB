@@ -5,7 +5,7 @@
             <select v-model="selectedLanguage"
                     class="block bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 <option value="en">English</option>
-                <option value="uk">Українська</option>
+                <option value="ua">Українська</option>
                 <option value="no">Norwegian</option>
                 <option value="pl">Polish</option>
                 <option value="ru">Русский</option>

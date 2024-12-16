@@ -2,6 +2,6 @@
 
 @section('content')
 
-    <Index></Index>
+        <Index></Index>
 
 @endsection

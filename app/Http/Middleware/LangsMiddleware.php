@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Helpers\Langs;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -14,20 +15,55 @@ class LangsMiddleware
      *
      * @param \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response) $next
      */
-    public function handle(Request $request, Closure $next): Response
+
+
+//    public function handle(Request $request, Closure $next): Response
+//    {
+//       // $locale = ltrim($request->route()->getPrefix(), '/');
+//         $locale = $request->segment(1);
+//
+//
+//           // Set locale by default
+//        if (!$locale || !in_array($locale, Langs::LOCALES)) {
+//            $locale = config('app.locale'); // Локаль за замовчуванням
+//        }
+//
+//
+//        if ($locale) {
+//            App::setLocale($locale);
+//            // App::setLocale(Langs::getLocale());
+//        }
+//
+////        if ($locale === config('app.locale')) {
+////           // $uri = preg_replace("#^{$locale}(/|$)#", '', $request->path());
+////            $uri = str_replace($locale, '', $request->path());
+////            return redirect($uri, 301);
+////        }
+//
+//        dump($locale);
+//
+//        return $next($request);
+//    }
+//}
+
+
+    public function handle(Request $request, Closure $next)
     {
-        $locale = ltrim($request->route()->getPrefix(), '/');
+        // Отримуємо локаль з першого сегменту URL
+        $locale = $request->segment(1, '');
 
-        if ($locale){
-            App::setLocale($locale);
+        // Логування локалі
+        dump($locale);
+
+        // Якщо локаль не вказана або не є допустимою, встановлюємо локаль за замовчуванням
+        if (!$locale || !in_array($locale, Langs::LOCALES)) {
+            $locale = config('app.locale'); // Локаль за замовчуванням
         }
 
-        if ($locale === config('app.locale')) {
-            //Log::info('Request path:', ['path' => $request->path()]);
-            dump($request->path());
-        }
+        // Встановлюємо локаль
+        App::setLocale($locale);
 
-     //   dump($locale);
+        // Продовжуємо обробку запиту
         return $next($request);
     }
 }

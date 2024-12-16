@@ -14,18 +14,21 @@ use App\Http\Controllers\ShowsController;
 //Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
 
 
-
-
-
-
-
 Route::prefix(\App\Helpers\Langs::getLocale())->middleware('langs')->group(function () {
-    Route::get('/',IndexController::class);
+
+    Route::get('/', IndexController::class);
     Route::get('/shows', [App\Http\Controllers\ShowsController::class, 'index'])->name('shows');
 });
 
 
+
+//Route::get('/', IndexController::class);
+//Route::get('/shows', [App\Http\Controllers\ShowsController::class, 'index'])->name('shows');
+
+//Main router for SPA
+// Route::get('/{page}',IndexController::class)->where('page', '.*');  //All redirect to Vue
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::get('/shows', [App\Http\Controllers\ShowsController::class, 'index'])->name('shows');
 
-//Route::get('/{page}',IndexController::class)->where('page', '.*');
+//Route::get('/{page}',IndexController::class)->where('page', '.*');  //All redirect to Vue
