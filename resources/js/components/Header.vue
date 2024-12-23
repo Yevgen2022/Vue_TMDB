@@ -51,19 +51,19 @@
 
                             <router-link to="/"
                                          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">
-                                Home
+                                {{ t('menu.Home')}}
                             </router-link>
                             <router-link to="/movies"
                                          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">
-                                Movies
+                                {{ t('menu.Movies')}}
                             </router-link>
                             <router-link to="/shows"
                                          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">
-                                TV Shows
+                                {{t('menu.TV Shows')}}
                             </router-link>
                             <router-link to="/people"
                                          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">
-                                People
+                                {{t('menu.People')}}
                             </router-link>
 
                         </div>
@@ -131,6 +131,10 @@
 
 <script setup>
 import SelectComponent from "./SelectComponent.vue";
+
+import { useI18n } from "vue-i18n";
+const { t } = useI18n({useScope: 'global'})
+
 </script>
 
 <style scoped>

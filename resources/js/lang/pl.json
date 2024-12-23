@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "Home": "Strona główna",
+        "Movies": "Filmy",
+        "TV Shows": "Programy telewizyjne",
+        "People": "Ludzie"
+    },
+    "title": {
+        "Home": "Witaj na stronie głównej",
+        "Movies": "Witaj na stronie filmów",
+        "TV Shows": "Witaj na stronie programów telewizyjnych",
+        "People": "Witaj na stronie ludzi"
+    }
+}

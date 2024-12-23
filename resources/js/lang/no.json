@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "Home": "Hjem",
+        "Movies": "Filmer",
+        "TV Shows": "TV-programmer",
+        "People": "Personer"
+    },
+    "title": {
+        "Home": "Velkommen til Hjem-siden",
+        "Movies": "Velkommen til Filmsiden",
+        "TV Shows": "Velkommen til TV-programsiden",
+        "People": "Velkommen til Personersiden"
+    }
+}

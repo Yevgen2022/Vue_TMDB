@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "Home": "Home",
+        "Movies": "Movies",
+        "TV Shows": "TV Shows",
+        "People": "People"
+    },
+    "title": {
+        "Home": "Welcome to Home page",
+        "Movies": "Welcome to Movies page",
+        "TV Shows": "Welcome to TV Shows page",
+        "People": "Welcome to People page"
+    }
+}
