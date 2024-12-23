@@ -14,5 +14,4 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/',IndexController::class);
 
-
-//Route::get('/{page}',IndexController::class)->where('page', '.*');
+Route::get('/{page}',IndexController::class)->where('page', '.*');
