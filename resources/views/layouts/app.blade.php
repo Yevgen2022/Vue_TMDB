@@ -19,31 +19,28 @@
 <body>
 
 
+{{-- For including Vue--}}
 <div id="app" class="p-5 bg-gray-300">
-
-    {{--    <main class="py-4">--}}
-    @yield('content')
-    {{--    </main>--}}
-
-
+{{--    <main class="py-4">--}}
+{{--        @yield('content')--}}
+{{--    </main>--}}
 </div>
+
+
+{{--For including heder.blade.php--}}
+{{--@include('partials.header')    <!-- Підключаємо хедер -->--}}
+{{--<div id="app">--}}
+
+{{--    <main class="py-4">--}}
+{{--        @yield('content')  <!-- Виводимо вміст сторінки -->--}}
+{{--    </main>--}}
+{{--</div>--}}
+
+
 </body>
 </html>
 
 
-{{--<body>--}}
 
 
-{{--<div id="app">--}}
-
-{{--    <Header></Header>--}}
-
-{{--    <main class="py-4">--}}
-{{--        @yield('content')--}}
-{{--    </main>--}}
-
-
-{{--</div>--}}
-{{--</body>--}}
-{{--</html>--}}
 

@@ -1,13 +1,18 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 // import HomePage from '../Pages/HomePage.vue';
-import MoviesPage from '../Pages/MoviesPage.vue';
-import ShowsPage from '../Pages/ShowsPage.vue';
-import PeoplePage from "../Pages/PeoplePage.vue";
+// import MoviesPage from '../Pages/MoviesPage.vue';
+// import ShowsPage from '../Pages/ShowsPage.vue';
+// import PeoplePage from "../Pages/PeoplePage.vue";
 
 
 const routes = [
 
-    // { path: '/', component: HomePage },
+    // Example of routing
+    //  { path: '/', component: HomePage },
+    //  {path: '/people', component: PeoplePage}
+    //
+
+
 
     {
         path: '/',
@@ -15,9 +20,24 @@ const routes = [
         component: () => import('../Pages/HomePage.vue'),
     },
 
-    { path: '/movies', component: MoviesPage },
-    { path: '/shows', component: ShowsPage },
-    { path: '/people', component: PeoplePage },
+    {
+        path: '/movies',
+        name: 'Movies',
+        component: () => import('../Pages/MoviesPage.vue'),
+    },
+
+    {
+        path: '/shows',
+        name: 'TV Shows',
+        component: () => import('../Pages/ShowsPage.vue'),
+    },
+
+
+    {
+        path: '/people',
+        name: 'People',
+        component: () => import('../Pages/PeoplePage.vue'),
+    },
 
 ];
 

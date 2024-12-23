@@ -12,6 +12,10 @@ use App\Http\Controllers\IndexController;
 //Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people');
 
 
+
+
+
+
 Route::get('/',IndexController::class);
 
 Route::get('/{page}',IndexController::class)->where('page', '.*');

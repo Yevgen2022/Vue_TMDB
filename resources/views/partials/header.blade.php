@@ -31,7 +31,7 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400" aria-current="page">Home</a>
-                            <a href="{{ route('movies') }}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">Movies</a>
+                            <a href="/movies" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">Movies</a>
                             <a href="/shows" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">TV Shows</a>
                             <a href="/people" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white active:text-gray-400">People</a>
                         </div>
